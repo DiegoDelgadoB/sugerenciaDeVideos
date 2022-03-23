@@ -20,13 +20,14 @@ class Multimedia {
         return "Este método es para realizar un cambio en la URL del video"
     }
 }
+
 class Reproductor extends Multimedia {
     constructor(url, id) {
         super(url);
         let _id = id;
         this.getId = () => _id
     }
-
+    
     playMultimedia() {
         tipoMultimedia.playVideo(this.url, this.getId())
     }
@@ -36,9 +37,9 @@ class Reproductor extends Multimedia {
     }
 }
 
-let musica = new Reproductor("https://www.youtube.com/embed/8nXqcugV2Y4", "musica")
-let peliculas = new Reproductor("https://www.youtube.com/embed/9ix7TUGVYIo", "peliculas")
-let series = new Reproductor("https://www.youtube.com/embed/oqxAJKy0ii4", "series")
+let musica = new Reproductor("https://www.youtube.com/embed/sCNlt5nvSI8?start=5", "musica")
+let peliculas = new Reproductor("https://www.youtube.com/embed/fWQrd6cwJ0A", "peliculas")
+let series = new Reproductor("https://www.youtube.com/embed/Qz3u06eXf0E", "series")
 // console.log(musica)
 // console.log(peliculas)
 // console.log(series)
@@ -47,6 +48,7 @@ let series = new Reproductor("https://www.youtube.com/embed/oqxAJKy0ii4", "serie
 musica.playMultimedia()
 peliculas.playMultimedia()
 series.playMultimedia()
+
 
 // console.log(musica.setInicio(20))
 // musica.setInicio(20)
