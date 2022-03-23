@@ -20,3 +20,18 @@ class Multimedia {
         return "Este método es para realizar un cambio en la URL del video"
     }
 }
+class Reproductor extends Multimedia {
+    constructor(url, id) {
+        super(url);
+        let _id = id;
+        this.getId = () => _id
+    }
+
+    playMultimedia() {
+        tipoMultimedia.playVideo(this.url, this.getId())
+    }
+    setInicio(tiempo) {
+        const inicio = document.getElementById(this.getId())
+        inicio.setAttribute('src', `${this.getUrl()}?start=${tiempo}`)
+    }
+}
