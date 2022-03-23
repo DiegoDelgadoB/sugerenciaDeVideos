@@ -35,3 +35,22 @@ class Reproductor extends Multimedia {
         inicio.setAttribute('src', `${this.getUrl()}?start=${tiempo}`)
     }
 }
+
+
+let musica = new Reproductor("https://www.youtube.com/embed/8nXqcugV2Y4", "musica")
+let peliculas = new Reproductor("https://www.youtube.com/embed/9ix7TUGVYIo", "peliculas")
+let series = new Reproductor("https://www.youtube.com/embed/oqxAJKy0ii4", "series")
+// console.log(musica)
+// console.log(peliculas)
+// console.log(series)
+
+// console.log(musica.playMultimedia())
+musica.playMultimedia()
+peliculas.playMultimedia()
+series.playMultimedia()
+
+
+// console.log(musica.setInicio(20))
+// musica.setInicio(20)
+peliculas.setInicio(40)
+series.setInicio(17)
